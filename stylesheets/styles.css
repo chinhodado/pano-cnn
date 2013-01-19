@@ -1,8 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,vietnamese);
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 'Open Sans', Arial, sans-serif;
   color:#777;
   font-weight:300;
 }
@@ -28,8 +27,14 @@ h2 {
   color:#393939;
 }
 
-h3, h4, h5, h6 {
+h3, h5, h6 {
   color:#494949;
+}
+
+h4{
+	color:#fff;
+	font-weight:300;
+	margin-bottom:10px;
 }
 
 a {
@@ -46,7 +51,7 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width:85%;
   margin:0 auto;
 }
 
@@ -160,7 +165,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:80%;
   float:right;
   padding-bottom:50px;
 }
@@ -182,6 +187,28 @@ footer {
   position:fixed;
   bottom:50px;
 }
+
+/* @media print, screen and (max-width: 1700px) and (min-width: 1501px) {
+  
+  div.wrapper {
+    width:1305px;
+  }
+  
+  section {
+    width:1000px;
+  }
+}
+
+@media print, screen and (max-width: 1500px) and (min-width: 1000px) {
+  
+  div.wrapper {
+    width:1000px;
+  }
+  
+  section {
+    width:720px;
+  }
+} */
 
 @media print, screen and (max-width: 960px) {
   

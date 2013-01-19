@@ -1,0 +1,64 @@
+<krpano version="1.0.8.15" title="Chuyên Ngữ" onstart="wait(0);startup();">
+	
+	
+	<!-- adjust the examples backbutton position (if available), the wait(0) in the onstart action allows executing this event -->
+	<events name="backbutton_adjust" onxmlcomplete="if(layer[backbutton], set(layer[backbutton].y,90));" />
+	
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- set skin settings: gyro? -->
+	<skin_settings 
+	               gyro="true"
+	               thumbswidth="120" thumbsheight="80" thumbspadding="10" thumbscrop="" thumbsopened="false"
+	               tooltips_thumbs="false" tooltips_hotspots="false" tooltips_mapspots="false"
+	               controlbar_offset="20"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+
+
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[0].name));
+		loadscene(get(startscene), null, MERGE);
+	</action>
+
+	
+	<scene name="congtruong" title="Cổng trường" onstart="" thumburl="images/thumb/congtruong.jpg">
+
+		<view hlookat="80" vlookat="0" fovtype="MFOV" fov="100" fovmin="50" fovmax="140" limitview="auto" />
+
+
+
+		<image>
+			<sphere url="images/pano/congtruong.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="sanhtruong" title="Sảnh trường" onstart="" thumburl="images/thumb/sanhtruong.jpg">
+
+		<view hlookat="5" vlookat="5" fovtype="MFOV" fov="100" fovmin="50" fovmax="140" limitview="auto" />
+
+
+
+		<image>
+			<sphere url="images/pano/sanhtruong.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="santruong" title="Sân trường" onstart="" thumburl="images/thumb/santruong.jpg">
+
+		<view hlookat="80" vlookat="0" fovtype="MFOV" fov="100" fovmin="50" fovmax="140" limitview="auto" />
+
+
+
+		<image>
+			<sphere url="images/pano/santruong.jpg" />
+		</image>
+
+	</scene>
+	
+</krpano>
